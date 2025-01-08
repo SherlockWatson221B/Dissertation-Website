@@ -1,0 +1,253 @@
+//Header
+#hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //background-color: orangered;
+    height: calc(100vh - 143.375px);
+    width: 100%;
+    .hero-text {
+        align-self: center;
+        padding-bottom: 10px;
+        h1 {
+            padding: 20px 30px;
+            font-size: 25px;
+        }
+        h2 {
+            padding-left: 30px;
+            font-size: 20px;
+        }
+        p {
+            font-size: 13px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    .hero {
+        //align-self: center;
+        img {
+            height: 300px;
+            width: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 850px) {
+    #hero-image {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        //background-color: orangered;
+        height: calc(100vh - 149.38px);
+        width: 100%;
+        .hero-text {
+            padding-top: 30px;
+            align-self: normal;
+        }
+        .hero {
+            img {
+                height: calc(100vh - 149.38px);
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $large) {
+    #hero-image {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        //background-color: orangered;
+        height: calc(100vh - 161.484px);
+        width: 100%;
+        .hero-text {
+            align-self: normal;
+        }
+        .hero {
+            img {
+                height: calc(100vh - 161.484px);
+                width: auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $extra-large) {
+    #hero-image {
+        display: flex;
+        justify-content: space-between;
+        //background-color: orangered;
+        height: calc(100vh - 174.98px);
+        width: 100%;
+        .hero-text {
+            align-self: normal;
+        }
+        .hero {
+            img {
+                height: calc(100vh - 174.98px);
+                width: auto;
+            }
+        }
+    }
+}
+
+// https://getflywheel.com/layout/flexbox-create-modern-card-design-layout/ Accessed(Feburary 20th 2024)
+//Used to help with the layout of cards and make them size correctly using flex.
+//Service Cards
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .service-cards {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid $grey;
+            margin-bottom: 30px;
+            flex: 0 1 98%;
+            .card1 {
+                background-color: #F9CCCC;
+            }
+            .card2 {
+                background-color: #9FEBF2;
+            }
+            .card3 {
+                background-color: #FFE699;
+            }
+            .card4 {
+                background-color: #A1E7B1;
+            }
+            .card5 {
+                background-color: #CFC1FD;
+            }
+            .card6 {
+                background-color: #FB7060;
+            }
+            .card7 {
+                background-color: #BAF863;
+            }
+            .card-color {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 150px;
+                h1 {
+                    padding-top: 6%;
+                }
+            }
+            p {
+                padding: 7% 5%;
+            }
+            img {
+                margin-top: -75px;
+                margin-right: auto;
+                margin-left: auto;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $large) {
+    .container {
+        .cards {
+            .card {
+                flex: 0 1 95%;
+            }
+            .cards2 {
+                flex: 0 1 45%;
+            }
+            .cards3 {
+                flex: 0 1 45%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $extra-large) {
+    .container {
+        .cards {
+            .card {
+                flex: 0 1 28%;
+            }
+            .cards2 {
+                flex: 0 1 28%;
+            }
+            .cards3 {
+                flex: 0 1 22%;
+            }
+        }
+    }
+}
+
+//Footer
+footer {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .footer-small2,
+        .footer-small3 {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            .alternative-links {
+                ul {
+                    display: flex;
+                    list-style: none;
+                    padding: 0;
+                    justify-content: space-around;
+                    a {
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .social-links {
+                display: flex;
+                justify-content: flex-end;
+                padding-top: 15%;
+                .social-logo {
+                    height: 50px;
+                    width: 50px;
+                    margin: 0 1%;
+                }
+            }
+            .address {
+                padding-top: 5%;
+                padding-bottom: 5%;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $large) {
+    footer {
+        .footer-container {
+            .footer-small2 {
+                width: 25%;
+            }
+            .footer-small3 {
+                width: 75%;
+                flex-direction: row;
+                justify-content: space-between;
+                .alternative-links {
+                    width: 75%;
+                }
+            }
+        }
+    }
+}

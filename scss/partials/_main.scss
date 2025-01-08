@@ -1,0 +1,148 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: "Roboto";
+    margin: 0;
+    color: $grey;
+    // overflow: hidden;
+}
+
+body {
+    //overflow-x: hidden;
+    width: 100%;
+}
+
+.head-container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .header-container {
+        //background-color: orangered;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 10px 25px;
+        img {
+            width: 250px;
+            height: auto;
+        }
+        .sign-in-button {
+            display: flex;
+            padding-left: 15px;
+            margin: auto 5px;
+            a {
+                display: flex;
+                text-decoration: none;
+                p {
+                    font-size: 15x;
+                    margin: auto 0;
+                    padding-right: 20px;
+                    color: $primary-color;
+                    font-weight: bolder;
+                }
+                #user {
+                    width: 30px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    nav {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 16px;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $medium) {
+    header {
+        .header-container {
+            width: 750px;
+            padding: 10px 0px;
+            .sign-in-button {
+                padding-left: 0px;
+            }
+        }
+        nav {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (min-width: $large) {
+    header {
+        .header-container {
+            width: 970px;
+            padding: 10px 0px;
+            img {
+                width: 270px;
+                height: auto;
+            }
+            .sign-in-button {
+                padding-left: 0px;
+                p {
+                    padding-right: 25px;
+                    font-size: 18px;
+                }
+                #user {
+                    width: 35px;
+                    height: auto;
+                }
+            }
+        }
+        nav {
+            padding-top: 18px;
+            padding-bottom: 18px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (min-width: $extra-large) {
+    header {
+        .header-container {
+            width: 1200px;
+            padding: 10px 0px;
+            img {
+                width: 288px;
+                height: auto;
+            }
+            .sign-in-button {
+                padding-left: 0px;
+                //p {
+                //padding-right: 28px;
+                //font-size: 20px;
+                //}
+                // #user {
+                ////width: 38px;
+                //height: auto;
+                //}
+            }
+        }
+        nav {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+//Error styling
+.error {
+    font-size: 18px;
+    align-self: center;
+    font-weight: bolder;
+    color: red;
+    padding-top: 5%;
+}
+
+.error2 {
+    font-size: 18px;
+    align-self: center;
+    font-weight: bolder;
+    color: red;
+    padding-bottom: 5%;
+}
+
+//Login container
+.login-container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 143.375px);
+    width: 100%;
+    .login-box {
+        border: 1px solid $grey;
+        box-shadow: 0 0 3px #373737;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 45px;
+        margin-top: 45px;
+        width: 450px;
+        min-height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        h1 {
+            align-self: center;
+            padding-top: 10%;
+            font-size: 2em;
+        }
+        .login-form {
+            padding: 10% 30px;
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            .form-container {
+                display: flex;
+                margin-bottom: 75px;
+                justify-content: space-between;
+                label {
+                    align-self: center;
+                }
+                .input {
+                    border: 1px solid $grey;
+                    border-radius: 15px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+                    width: 100%;
+                    margin-left: 5%;
+                }
+            }
+            p {
+                padding-bottom: 5%;
+                text-align: center;
+            }
+            .button {
+                background-color: black;
+                color: white;
+                width: 70%;
+                padding: 2% 0;
+                align-self: center;
+                border: 1px solid black;
+                border-radius: 15px;
+            }
+            .delete {
+                display: none;
+            }
+        }
+        a {
+            padding-bottom: 5%;
+            text-decoration: none;
+            align-self: center;
+            p {
+                align-self: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $medium) {
+    .login-container {
+        min-height: calc(100vh - 149.38px);
+    }
+}
+
+@media screen and (min-width: $large) {
+    .login-container {
+        min-height: calc(100vh - 161.484px);
+    }
+}
+
+@media screen and (min-width: $extra-large) {
+    .login-container {
+        min-height: calc(100vh - 174.98px);
+        .login-box {
+            margin-top: 35px;
+            margin-bottom: 35px;
+            width: 550px;
+        }
+    }
+}

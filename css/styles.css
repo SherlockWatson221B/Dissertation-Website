@@ -127,227 +127,86 @@ header nav ul a:hover {
     font-size: 18px;
   }
 }
-#hero-image {
+#hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: calc(100vh - 143.375px);
-  width: 100%;
-}
-#hero-image .hero-text {
-  align-self: center;
-  padding-bottom: 10px;
-}
-#hero-image .hero-text h1 {
-  padding: 20px 30px;
-  font-size: 25px;
-}
-#hero-image .hero-text h2 {
-  padding-left: 30px;
-  font-size: 20px;
-}
-#hero-image .hero-text p {
-  font-size: 13px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-#hero-image .hero img {
-  height: 300px;
-  width: auto;
-}
-
-@media screen and (min-width: 850px) {
-  #hero-image {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: calc(100vh - 149.38px);
-    width: 100%;
-  }
-  #hero-image .hero-text {
-    padding-top: 30px;
-    align-self: normal;
-  }
-  #hero-image .hero img {
-    height: calc(100vh - 149.38px);
-    width: 75%;
-  }
-}
-@media screen and (min-width: 992px) {
-  #hero-image {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: calc(100vh - 161.484px);
-    width: 100%;
-  }
-  #hero-image .hero-text {
-    align-self: normal;
-  }
-  #hero-image .hero img {
-    height: calc(100vh - 161.484px);
-    width: auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #hero-image {
-    display: flex;
-    justify-content: space-between;
-    height: calc(100vh - 174.98px);
-    width: 100%;
-  }
-  #hero-image .hero-text {
-    align-self: normal;
-  }
-  #hero-image .hero img {
-    height: calc(100vh - 174.98px);
-    width: auto;
-  }
-}
-.container {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.container .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.container .cards .service-cards {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #373737;
-  margin-bottom: 30px;
-  flex: 0 1 98%;
-}
-.container .cards .service-cards .card1 {
-  background-color: #F9CCCC;
-}
-.container .cards .service-cards .card2 {
-  background-color: #9FEBF2;
-}
-.container .cards .service-cards .card3 {
-  background-color: #FFE699;
-}
-.container .cards .service-cards .card4 {
-  background-color: #A1E7B1;
-}
-.container .cards .service-cards .card5 {
-  background-color: #CFC1FD;
-}
-.container .cards .service-cards .card6 {
-  background-color: #FB7060;
-}
-.container .cards .service-cards .card7 {
-  background-color: #BAF863;
-}
-.container .cards .service-cards .card-color {
-  display: flex;
+  align-items: center;
   justify-content: center;
+}
+#hero #hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 150px;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
-.container .cards .service-cards .card-color h1 {
-  padding-top: 6%;
+#hero nav {
+  position: absolute;
+  top: 6%;
+  width: 80%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 1rem 0;
+  border-radius: 999px;
 }
-.container .cards .service-cards p {
-  padding: 7% 5%;
-}
-.container .cards .service-cards img {
-  margin-top: -75px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-@media screen and (min-width: 992px) {
-  .container .cards .card {
-    flex: 0 1 95%;
-  }
-  .container .cards .cards2 {
-    flex: 0 1 45%;
-  }
-  .container .cards .cards3 {
-    flex: 0 1 45%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container .cards .card {
-    flex: 0 1 28%;
-  }
-  .container .cards .cards2 {
-    flex: 0 1 28%;
-  }
-  .container .cards .cards3 {
-    flex: 0 1 22%;
-  }
-}
-footer {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 40px;
-}
-footer .footer-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-footer .footer-container .footer-small2,
-footer .footer-container .footer-small3 {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-footer .footer-container .footer-small2 .alternative-links ul,
-footer .footer-container .footer-small3 .alternative-links ul {
-  display: flex;
+#hero nav ul {
   list-style: none;
   padding: 0;
-  justify-content: space-around;
-}
-footer .footer-container .footer-small2 .alternative-links ul a,
-footer .footer-container .footer-small3 .alternative-links ul a {
-  text-decoration: none;
-}
-footer .footer-container .footer-small2 .alternative-links ul a:hover,
-footer .footer-container .footer-small3 .alternative-links ul a:hover {
-  text-decoration: underline;
-}
-footer .footer-container .footer-small2 .social-links,
-footer .footer-container .footer-small3 .social-links {
+  margin: 0;
   display: flex;
-  justify-content: flex-end;
-  padding-top: 15%;
+  justify-content: space-around;
+  gap: 2rem;
 }
-footer .footer-container .footer-small2 .social-links .social-logo,
-footer .footer-container .footer-small3 .social-links .social-logo {
-  height: 50px;
-  width: 50px;
-  margin: 0 1%;
+#hero nav ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
-footer .footer-container .footer-small2 .address,
-footer .footer-container .footer-small3 .address {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  line-height: 1.4;
+#hero nav ul a:hover {
+  color: #ffd700;
 }
-
-@media screen and (min-width: 992px) {
-  footer .footer-container .footer-small2 {
-    width: 25%;
-  }
-  footer .footer-container .footer-small3 {
-    width: 75%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  footer .footer-container .footer-small3 .alternative-links {
-    width: 75%;
-  }
+#hero #welcome {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 28%;
+  right: 10%;
+  height: 55%;
+  width: 60%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border-radius: 16px;
+}
+#hero #welcome h1 {
+  padding-top: 8%;
+  color: #ffb300;
+  font-size: 2.5rem;
+}
+#hero #welcome #welcome-p {
+  padding-top: 6%;
+  width: 75%;
+  align-self: center;
+  line-height: 1.5;
+}
+#hero #welcome #welcome-button-container #welcome-button {
+  border-radius: 16px;
+  width: 25%;
+  height: 10%;
+  align-self: center;
+  color: white;
+  background-color: #ffb300;
+}
+#hero #welcome #welcome-button-container #welcome-button p {
+  padding: auto;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

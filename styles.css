@@ -1,0 +1,212 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  margin: 0;
+  color: #373737;
+}
+
+body {
+  width: 100%;
+}
+
+.head-container {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px 25px;
+}
+header .header-container img {
+  width: 250px;
+  height: auto;
+}
+header .header-container .sign-in-button {
+  display: flex;
+  padding-left: 15px;
+  margin: auto 5px;
+}
+header .header-container .sign-in-button a {
+  display: flex;
+  text-decoration: none;
+}
+header .header-container .sign-in-button a p {
+  font-size: 15x;
+  margin: auto 0;
+  padding-right: 20px;
+  color: #007860;
+  font-weight: bolder;
+}
+header .header-container .sign-in-button a #user {
+  width: 30px;
+  height: auto;
+}
+header nav {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 16px;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+header nav ul a {
+  text-decoration: none;
+}
+header nav ul a:hover {
+  color: #007860;
+}
+
+@media screen and (min-width: 768px) {
+  header .header-container {
+    width: 750px;
+    padding: 10px 0px;
+  }
+  header .header-container .sign-in-button {
+    padding-left: 0px;
+  }
+  header nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .header-container {
+    width: 970px;
+    padding: 10px 0px;
+  }
+  header .header-container img {
+    width: 270px;
+    height: auto;
+  }
+  header .header-container .sign-in-button {
+    padding-left: 0px;
+  }
+  header .header-container .sign-in-button p {
+    padding-right: 25px;
+    font-size: 18px;
+  }
+  header .header-container .sign-in-button #user {
+    width: 35px;
+    height: auto;
+  }
+  header nav {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .header-container {
+    width: 1200px;
+    padding: 10px 0px;
+  }
+  header .header-container img {
+    width: 288px;
+    height: auto;
+  }
+  header .header-container .sign-in-button {
+    padding-left: 0px;
+  }
+  header nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 18px;
+  }
+}
+#hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero #hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+#hero nav {
+  position: absolute;
+  top: 6%;
+  width: 80%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 1rem 0;
+  border-radius: 999px;
+}
+#hero nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+#hero nav ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+#hero nav ul a:hover {
+  color: #ffd700;
+}
+#hero #welcome {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 28%;
+  right: 10%;
+  height: 55%;
+  width: 60%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border-radius: 16px;
+}
+#hero #welcome h1 {
+  padding-top: 8%;
+  color: #ffb300;
+  font-size: 2.5rem;
+}
+#hero #welcome #welcome-p {
+  padding-top: 6%;
+  width: 75%;
+  align-self: center;
+  line-height: 1.5;
+}
+#hero #welcome #welcome-button-container #welcome-button {
+  border-radius: 16px;
+  width: 25%;
+  height: 10%;
+  align-self: center;
+  color: white;
+  background-color: #ffb300;
+}
+#hero #welcome #welcome-button-container #welcome-button p {
+  padding: auto;
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
